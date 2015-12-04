@@ -10,9 +10,22 @@
 		<body>
 
 			<div ng-controller="StoreController as store">
-				<h1> {{ store.product.name }} </h1>
-				<h2> ${{ store.product.price }} </h2>
-				<p> {{ store.product.description }} </p>
+				<div ng-repeat="product in store.products">
+					<h3> {{ product.name }} <em class="pull-right"> {{ product.price | currency }} </em></h3>
+					<p> {{ product.description }} </p>
+					<div ng-show="product.images.length">
+						<div>
+							<img ng-src="{{ product.images[0] }}"/>
+						</div>
+						
+						<ul>
+							<li ng-repeat="image in product.images">
+								<img ng-src="{{ image }}"/>
+							</li>
+						</ul>
+					</div>
+					<button ng-show="product.canPurchase"> Add to Cart </button>
+				</div>
 			</div>
 
 		</body>
