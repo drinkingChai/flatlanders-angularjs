@@ -1,0 +1,7 @@
+.ng-invalid.ng-dirty {
+	border-color: #Fa787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78Fa89;
+}
