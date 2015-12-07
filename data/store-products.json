@@ -12,7 +12,8 @@
       "img/gem-05.gif",
       "img/gem-09.gif"
     ],
-    "reviews": []
+    "reviews": [],
+    "canPurchase": true
   },
   {
     "name": "Bloodstone",
@@ -27,7 +28,8 @@
       "img/gem-03.gif",
       "img/gem-04.gif"
     ],
-    "reviews": []
+    "reviews": [],
+    "canPurchase": false
   },
   {
     "name": "Zircon",
@@ -42,6 +44,7 @@
       "img/gem-07.gif",
       "img/gem-08.gif"
     ],
-    "reviews": []
+    "reviews": [],
+    "canPurchase": true
   }
 ]
