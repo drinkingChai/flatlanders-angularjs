@@ -34,16 +34,12 @@
 				{{reviewCtrl.review.body}}
 				<cite>by: {{reviewCtrl.review.author}}</cite>
 			</blockquote>
-			<select ng-model="reviewCtrl.review.stars" required>
-				<option value="1">1 star</option>
-				<option value="2">2 stars</option>
-				<option value="3">3 stars</option>
-				<option value="4">4 stars</option>
-				<option value="5">5 stars</option>
+			<h4>Submit a Review</h4>
+			<select  class="form-control" ng-model="reviewCtrl.review.stars" ng-options="star for star in [5,4,3,2,1]" required>
+				<option value>Rate the Product</option>
 			</select>
-			<textarea ng-model="reviewCtrl.review.body" required></textarea>
-			<label>by:</label>
-			<input ng-model="reviewCtrl.review.author" type="email" required/>
+			<textarea class="form-control" ng-model="reviewCtrl.review.body" placeholder="Write a short review of the product..." title="Review" required></textarea>
+			<input class="form-control" ng-model="reviewCtrl.review.author" placeholder="john@ex.com" title="Email" type="email" required/>
 			reviewForm is {{reviewForm.$valid}}
 			<input type="submit" value="Submit"/>
 		</form>

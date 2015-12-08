@@ -5,3 +5,11 @@
 .ng-valid.ng-dirty {
 	border-color: #78Fa89;
 }
+
+.container {
+	max-width: 600px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+}

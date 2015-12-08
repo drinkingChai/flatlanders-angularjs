@@ -2,6 +2,7 @@
 <html ng-app="store">
 	<head>
 		<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	    <!-- Include the AngularJS library -->
 	    <script type="text/javascript" src="js/angular.min.js"></script>
 	    <script type="text/javascript" src="js/products.js"></script>
@@ -9,19 +10,24 @@
 		<title></title>
 	</head>
 		<body>
-
-			<div ng-controller="StoreController as store">
-				<div ng-repeat="product in store.products">
-					<product-title></product-title>
-					<div ng-show="product.images.length">
-						<div>
-							<img ng-src="{{ product.images[0] }}"/>
+			<div class="container">
+				<div class="list-group" ng-controller="StoreController as store">
+					<div class="list-group-item" ng-repeat="product in store.products">
+						<product-title></product-title>
+						<div ng-show="product.images.length">
+							<div class="img-wrap">
+								<img ng-src="{{ product.images[0] }}"/>
+							</div>
+							<ul class="img-thumbnails clearfix">
+								<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+									<img ng-src="{{image}}">
+								</li>
+							</ul>
 						</div>
+						<product-panels></product-panels>
+						<button ng-show="product.canPurchase"> Add to Cart </button>
 					</div>
-					<product-panels></product-panels>
-					<button ng-show="product.canPurchase"> Add to Cart </button>
 				</div>
 			</div>
-
 		</body>
 </html>
