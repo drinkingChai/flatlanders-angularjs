@@ -1,0 +1,9 @@
+<div class="image-gallery clearfix" ng-show="product.images.length">
+	<img class="large-image thumbnail" ng-src="{{ product.images[gallery.currentImage] }}"/> <!--set the image to currentImage of the controller-->
+	<ul>
+		<li class="small-image thumbnail" ng-repeat="(imageNumber, image) in product.images" ng-click="gallery.selectImage(imageNumber)">
+			<!--key, value pair where the key is passed onto selectImage-->
+			<img ng-src="{{image}}">
+		</li>
+	</ul>
+</div>
