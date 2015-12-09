@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module('store', ['store-products']);
+	var app = angular.module('store', ['store-products', 'cart']);
 
 	app.controller('StoreController', ['$http', function($http) {
 		var store = this;
@@ -9,6 +9,7 @@
 			store.products = data;
 		});
 	}]);
+
 
 	app.controller('ReviewController', function() {
 		this.review = {};

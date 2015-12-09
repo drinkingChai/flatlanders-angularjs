@@ -10,6 +10,19 @@
 	max-width: 600px;
 }
 
+.cart {
+	text-align: right;
+	background-color: #09f985;
+	font-size: 15px;
+	padding: 10px;
+}
+
+.cart-items {
+	position: absolute;
+	z-index: 1;
+
+}
+
 .form-control {
 	margin-bottom: 10px;
 }
@@ -34,3 +47,6 @@
 	display: inline-block;
 }
 
+.cart {
+	text-align: right;
+}
