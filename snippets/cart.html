@@ -1,15 +1,35 @@
 <div class="cart">
-	<span class="glyphicon glyphicon-shopping-cart"></span> Cart
-	<div class="cart-items">
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="item in cartCtl.cart track by $index">
-				{{item.name}} <span>{{item.price | currency}}</span>
-				<button ng-click="cartCtl.removeFromCart(item)">Remove</button>
-			</li>
-			<li class="list-group-item">
-				Total: {{cartCtl.total | currency }}
-				<button ng-show="cartCtl.cart.length">Check out</button>
-			</li>
-		</ul>
+	<button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+		<span class="glyphicon glyphicon-shopping-cart"></span> Cart
+	</button>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    	<div class="modal-header">Cart</div>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="item in cartCtl.cart track by $index">
+					<div class="row">
+						<div class="col-md-8">
+							<p>{{item.name}}</p>
+							<button ng-click="cartCtl.removeFromCart(item)">
+								<span class="glyphicon glyphicon-trash"></span> Remove
+							</button>
+							</div>
+						<div class="col-md-4">
+							{{item.price | currency}}
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item total">
+					<p> Total: {{cartCtl.total | currency }} </p>
+					<button ng-show="cartCtl.cart.length">Check out</button>
+				</li>
+			</ul>
 	</div>
+
+  </div>
 </div>

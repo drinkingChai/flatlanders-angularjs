@@ -23,6 +23,14 @@
 
 }
 
+.total {
+	text-align: right;
+}
+
+.modal-content ul {
+	margin-bottom: 0;
+}
+
 .form-control {
 	margin-bottom: 10px;
 }
@@ -45,8 +53,4 @@
 
 .image-gallery ul li {
 	display: inline-block;
-}
-
-.cart {
-	text-align: right;
 }
