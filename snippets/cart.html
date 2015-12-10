@@ -14,18 +14,19 @@
 				<li class="list-group-item" ng-repeat="item in cartCtl.cart track by $index">
 					<div class="row">
 						<div class="col-md-8">
-							<p>{{item.name}}</p>
+							<p>{{item.name}} x {{item.quantity}}</p>
+							<input class="form-control quantity" ng-model="item.quantity" ng-change="cartCtl.updateTotal()" type="number" min="1"/>
 							<button ng-click="cartCtl.removeFromCart(item)">
 								<span class="glyphicon glyphicon-trash"></span> Remove
 							</button>
 							</div>
 						<div class="col-md-4">
-							{{item.price | currency}}
+							{{item.price * item.quantity | currency}}
 						</div>
 					</div>
 				</li>
 				<li class="list-group-item total">
-					<p> Total: {{cartCtl.total | currency }} </p>
+					<p> Total: {{cartCtl.updateTotal() | currency}} </p>
 					<button ng-show="cartCtl.cart.length">Check out</button>
 				</li>
 			</ul>

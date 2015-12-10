@@ -23,6 +23,10 @@
 
 }
 
+.quantity {
+	width: 80px;
+}
+
 .total {
 	text-align: right;
 }
