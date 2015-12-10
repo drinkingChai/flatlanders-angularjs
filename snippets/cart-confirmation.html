@@ -1,0 +1,16 @@
+<div ng-show="product.canPurchase">
+		<div id="cartConfirm" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-sm">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		    	<p>Would you like to add?</p>
+		    	{{product.name}} x {{product.addNewQuantity}}
+		    	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="cartCtl.addToCart(product)">Yes</button>
+			</div>
+		  </div>
+		</div>
+		<input class="form-control quantity" ng-model="product.addNewQuantity" ng-init="product.addNewQuantity=1" type="number" min="1"/>
+		<button class="btn" data-toggle="modal" data-target="#cartConfirm"> Add to Cart </button>
+	</div>
+</div>

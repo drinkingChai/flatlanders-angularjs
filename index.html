@@ -20,10 +20,7 @@
 						<product-title></product-title>
 						<product-gallery></product-gallery>
 						<product-panels></product-panels>
-						<form name="cartForm" ng-show="product.canPurchase">
-							<input class="form-control quantity" ng-model="product.addNewQuantity" ng-init="product.addNewQuantity=1" type="number" min="1"/>
-							<button ng-click="cartCtl.addToCart(product)"> Add to Cart </button>
-						</form>
+						<cart-confirmation></cart-confirmation>
 					</div>
 				</div>
 			</div>

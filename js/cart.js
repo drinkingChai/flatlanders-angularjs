@@ -47,4 +47,12 @@
 			controllerAs: 'cartCtl'
 		};
 	});
+
+	app.directive('cartConfirmation', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'snippets/cart-confirmation.html'
+		};
+	});
+
 })();
