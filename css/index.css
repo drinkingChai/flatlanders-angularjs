@@ -58,3 +58,15 @@
 .image-gallery ul li {
 	display: inline-block;
 }
+
+.cart-confirm-modal {
+	text-align: center;
+}
+
+.cart-confirm-modal button {
+	width: 80px;
+}
+
+.cart-confirm-modal .modal-content {
+	padding: 30px;
+}
