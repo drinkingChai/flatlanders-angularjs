@@ -17,10 +17,10 @@
 	</div>
 	<div ng-show="panel.isSelected(2)">
 		<h4>Specifications</h4>
-		<p><em>Shine:</em>{{product.shine}}</p>
-		<p><em>Rarity:</em>{{product.rarity}}</p>
-		<p><em>Color:</em>{{product.color}}</p>
-		<p><em>Faces:</em>{{product.faces}}</p>
+		<p><b>Shine:</b> {{product.shine}}</p>
+		<p><b>Rarity:</b> {{product.rarity}}</p>
+		<p><b>Color:</b> {{product.color}}</p>
+		<p><b>Faces:</b>{{product.faces}}</p>
 	</div>
 	<div ng-show="panel.isSelected(3)">
 		<h4>Reviews</h4>
@@ -40,9 +40,8 @@
 				<option value>Rate the Product</option>
 			</select>
 			<textarea class="form-control" ng-model="reviewCtrl.review.body" placeholder="Write a short review of the product..." title="Review" required></textarea>
-			<input class="form-control" ng-model="reviewCtrl.review.author" placeholder="john@ex.com" title="Email" type="email" required/>
-			reviewForm is {{reviewForm.$valid}}
-			<input type="submit" value="Submit"/>
+			<input class="form-control" ng-model="reviewCtrl.review.author" placeholder="john@ex.com" title=il" type=il" required/>
+			<button class="btn btn-default" type="submit">Submit</button>
 		</form>
 	</div>
 </div>

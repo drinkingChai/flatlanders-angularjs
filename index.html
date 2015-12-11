@@ -15,6 +15,7 @@
 		<body>
 			<div class="container">
 				<div class="list-group" ng-controller="StoreController as store">
+					<store-header></store-header>
 					<cart></cart>
 					<div class="list-group-item" ng-repeat="product in store.products">
 						<product-title></product-title>

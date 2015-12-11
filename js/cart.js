@@ -3,6 +3,7 @@
 	var app = angular.module('cart', []);
 	
 	app.directive('cart', function() {
+		//cart directive
 		return {
 			restrict: 'E',
 			templateUrl: 'snippets/cart.html',
@@ -49,9 +50,18 @@
 	});
 
 	app.directive('cartConfirmation', function() {
+		//cart confirmation directive
 		return {
 			restrict: 'E',
 			templateUrl: 'snippets/cart-confirmation.html'
+		};
+	});
+
+	app.directive('storeHeader', function() {
+		//store header directive
+		return {
+			restrict: 'E',
+			templateUrl: 'snippets/header.html'
 		};
 	});
 
